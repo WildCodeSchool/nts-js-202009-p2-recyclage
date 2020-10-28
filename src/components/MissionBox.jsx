@@ -3,7 +3,8 @@ import './MissionBox.css'
 
 function MissionBox() {
     return <div className = "missionBox">
-
+        <h2>Ta mission!</h2>
+        
     </div>
 }
 

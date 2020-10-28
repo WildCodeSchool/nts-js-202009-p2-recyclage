@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
 .missionBox {
     background-color: #9EF2FF;
     height: 85px;
     width: 255px;
+}
+
+.missionBox h2 {
+    color: #FFFFFF;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 8px;
 }
