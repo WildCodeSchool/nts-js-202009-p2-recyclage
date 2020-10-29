@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.Points {
+  width: 49px;
+  height: 50px;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+  transform: rotate(-16.71deg);
+  color: #ffffff;
+  transform: rotate(-16.71deg);
+  background-color: #7389f7;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  margin-left: 10px;
+}
