@@ -1,45 +1,39 @@
-
-.Title{
+.Title {
     height: 400px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.Baseline1{
-margin: 10px;
-transform: rotate(-8deg);
-font-size: 3.5em;
-color:#1EDEC7;
-background-color: yellow;
-animation-name: slideIn;
-animation-duration: 4s;
-animation-iteration-count: 1;
+.Baseline1 {
+    margin: 10px;
+    transform: rotate(-8deg);
+    font-size: 3.5em;
+    color: #1EDEC7;
+    background-color: yellow;
+    animation-name: slideIn;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
 }
 
-.Baseline2{
+.Baseline2 {
     margin: 10px;
     font-size: 5em;
     color: yellow;
     background-color: #1EDEC7;
     text-align: center;
+}
+
+@keyframes slideIn {
+    from {
+        transform: rotate(0deg);
     }
-
-
- @keyframes slideIn {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(352deg);
-        }
-      }
-
-    
-
-
+    to {
+        transform: rotate(352deg);
+    }
+}
