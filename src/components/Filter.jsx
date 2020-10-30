@@ -5,7 +5,7 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: props.open,
+      open: props.open
     };
   }
 
