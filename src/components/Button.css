@@ -1,19 +1,18 @@
-
-button {
-    width: 84px;
-    height: 31px;
-    background-color: #77ECBA;
-    color: #FFFFFF;
-    font-size: 13px;
-    font-weight: bold;
-    border-style: none;
-    box-shadow: 3px 3px 0px #66DFAC;
-    margin-top: -10px;
+.doneBttn {
+  width: 84px;
+  height: 31px;
+  background-color: #77ecba;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  border-style: none;
+  box-shadow: 3px 3px 0px #66dfac;
+  margin-top: -10px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
