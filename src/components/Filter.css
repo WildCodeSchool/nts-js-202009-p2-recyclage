@@ -1,0 +1,37 @@
+.container {
+    background-color:white;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtert {
+    color: #77ECBA;
+    transform: translate(0px, -10px);
+}
+.filtertopen {
+    color: #77ECBA;
+    transition:  0.5s ease-in-out;
+    
+}
+
+.btn {
+    border-radius: 3px;
+    border-color: #77ECBA;
+    color: #77ECBA;
+    border-style: inset;
+    background-color: white;
+}
+.open {
+    opacity: 1;
+    transition:  0.5s ease-in-out;
+}
+
+.close {
+    transform: translate(0px, -10px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 10px;
+}
