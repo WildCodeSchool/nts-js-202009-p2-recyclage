@@ -5,13 +5,14 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: props.open
+      open: props.open,
     };
   }
 
   render() {
     const { filterTitle, filter } = this.props;
     return (
+
       <div className={this.state.open ? 'containeropen' : 
       'containerclose'} 
             onClick={(event) => {
@@ -20,9 +21,11 @@ class Filter extends React.Component {
             }}>
         <h2 className={this.state.open ? 'filtert' : 'filtertopen'} 
         onClick={(event) => {
+
             const isopen = !this.state.open;
             this.setState({ open: isopen });
-          }}>
+          }}
+        >
           {filterTitle}
         </h2>
 
