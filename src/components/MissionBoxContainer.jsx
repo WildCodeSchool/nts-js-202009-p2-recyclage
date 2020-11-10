@@ -3,7 +3,6 @@ import MissionBox from './MissionBox';
 import Button from './Button';
 import Arrow from './Arrow';
 import Points from './Points';
-import MissionBoxContainer from './MissionBoxContainer.css';
 
 function MissionBoxContainer() {
   return (
