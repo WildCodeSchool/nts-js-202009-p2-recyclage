@@ -2,12 +2,17 @@ import React from 'react';
 import MissionBox from './MissionBox';
 import Button from './Button';
 import Arrow from './Arrow';
+import Points from './Points';
+import MissionBoxContainer from './MissionBoxContainer.css';
 
 function MissionBoxContainer() {
   return (
     <div>
       <Arrow direction="left" />
       <div>
+        <div className="pointsDirection">
+          <Points />
+        </div>
         <MissionBox />
         <Button />
       </div>

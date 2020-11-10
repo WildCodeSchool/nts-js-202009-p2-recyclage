@@ -1,6 +1,5 @@
 import React from 'react';
 import './MissionBox.css';
-import Points from './Points';
 
 function MissionBox() {
   return (
@@ -10,7 +9,6 @@ function MissionBox() {
           <h2>Ta mission!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <Points />
       </div>
     </div>
   );
