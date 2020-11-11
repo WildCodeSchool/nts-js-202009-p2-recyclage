@@ -35,6 +35,7 @@ class MissionBoxContainer extends React.Component {
     if (this.state.index < missions.length - 1) {
       const plusIndex = this.state.index + 1;
       this.setState({ index: plusIndex });
+      console.log(this.state.index);
     } else {
       this.setState({ index: 0 });
     }
@@ -53,7 +54,9 @@ class MissionBoxContainer extends React.Component {
     const { index } = this.state;
     return (
       <div>
-        <Arrow direction="left" onClick={this.indexIncrement} />
+        <div onClick={this.indexDecrement}>
+          <Arrow direction="left" />
+        </div>
         <div>
           <div className="pointsDirection">
             <Points />
@@ -61,7 +64,9 @@ class MissionBoxContainer extends React.Component {
           <MissionBox {...missions[index]} />
           <Button />
         </div>
-        <Arrow direction="right" onClick={this.indexDecrement} />
+        <div onClick={this.indexIncrement}>
+          <Arrow direction="right" />
+        </div>
       </div>
     );
   }
