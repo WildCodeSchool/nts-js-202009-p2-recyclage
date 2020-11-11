@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
-
 .missionBox {
   background-color: #9ef2ff;
-  height: 85px;
-  width: 255px;
+  height: 150px;
+  width: 260px;
   color: #ffffff;
   text-align: center;
   margin-top: 25px;
@@ -17,7 +16,7 @@
 }
 
 .missionBox p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .container {

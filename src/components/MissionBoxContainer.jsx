@@ -4,20 +4,67 @@ import Button from './Button';
 import Arrow from './Arrow';
 import Points from './Points';
 
-function MissionBoxContainer() {
-  return (
-    <div>
-      <Arrow direction="left" />
+const missions = [
+  {
+    id: 1,
+    consignes:
+      "Ta mission si tu l'acceptes est de jeter 10 bouteilles en plastique. Pour les recycler, jettes-les dans la poubelle Tri'Sac / bac jaune ou un point d'apport volontaire Plastique ou Emballage ménager. ",
+    points: 20,
+    image: '',
+  },
+  {
+    id: 2,
+    consignes:
+      "Ta mission si tu l'acceptes est de jeter 10 cannettes. Pour les recycler, jette-les dans la poubelle Tri'Sac / bac jaune ou dans un point d'apport volontaire Emballage ménager. ",
+    points: 10,
+    image: '',
+  },
+];
+
+class MissionBoxContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0,
+    };
+    this.indexIncrement = this.indexIncrement.bind(this);
+    this.indexDecrement = this.indexDecrement.bind(this);
+  }
+
+  indexIncrement() {
+    if (this.state.index < missions.length - 1) {
+      const plusIndex = this.state.index + 1;
+      this.setState({ index: plusIndex });
+    } else {
+      this.setState({ index: 0 });
+    }
+  }
+
+  indexDecrement() {
+    if (this.state.index > 0) {
+      const lessIndex = this.state.index - 1;
+      this.setState({ index: lessIndex });
+    } else {
+      this.setState({ index: missions.length - 1 });
+    }
+  }
+
+  render() {
+    const { index } = this.state;
+    return (
       <div>
-        <div className="pointsDirection">
-          <Points />
+        <Arrow direction="left" onClick={this.indexIncrement} />
+        <div>
+          <div className="pointsDirection">
+            <Points />
+          </div>
+          <MissionBox {...missions[index]} />
+          <Button />
         </div>
-        <MissionBox />
-        <Button />
+        <Arrow direction="right" onClick={this.indexDecrement} />
       </div>
-      <Arrow direction="right" />
-    </div>
-  );
+    );
+  }
 }
 
 export default MissionBoxContainer;

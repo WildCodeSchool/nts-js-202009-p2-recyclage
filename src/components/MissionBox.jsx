@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './MissionBox.css';
 
-function MissionBox() {
-  return (
-    <div className="container">
-      <div>
-        <div className="missionBox">
-          <h2>Ta mission!</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+class MissionBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    const { consignes } = this.props;
+    return (
+      <div className="container">
+        <div>
+          <div className="missionBox">
+            <h2>Ta mission!</h2>
+            <p>{consignes}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default MissionBox;
