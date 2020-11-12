@@ -1,88 +1,89 @@
-                    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
-                    .Avatar {
-                        padding-top: 40px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+.Avatar {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
                     
-                    h1 {
-                        color: #7389F7;
-                        font-family: 'Nunito', sans-serif;
-                        font-size: 2em;
-                    }
-                    
-                    .Align {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    
-                    .LabelNickname {
-                        background-color: #7389F7;
-                        padding-right: 10px;
-                        padding-left: 10px;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                        width: auto;
-                        border-style: double;
-                        border-color: #E0F2F6;
-                    }
-                    
-                    .LabelNickname:hover {
-                        box-shadow: 10px 5px 5px yellow;
-                    }
-                    
-                    h3 {
-                        color: white;
-                        font-family: 'Nunito', sans-serif;
-                        text-transform: uppercase;
-                        font-size: 14px;
-                    }
-                    
-                    figure {
-                        background-image: url('./imgAvatar/macaron.svg');
-                        background-repeat: no-repeat;
-                        padding-top: 15px;
-                        margin-left: 0;
-                        margin-right: 0;
-                        height: 250px;
-                        width: 250px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    
-                    .Circle {
-                        width: 170px;
-                        height: 170px;
-                        border-radius: 50%;
-                        opacity: 1;
-                        -webkit-transition: .3s ease-in-out;
-                        transition: .3s ease-in-out;
-                    }
-                    
-                    .Circle:hover {
-                        opacity: .5;
-                    }
-                    
-                    p {
-                        text-align: center;
-                        font-family: 'Nunito', sans-serif;
-                        color: #7389F7;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                    }
-                    
-                    .ButtonLeft {
-                        height: 50px;
-                        width: 50px;
-                        background: url('https://api.iconify.design/dashicons:arrow-left-alt2.svg?color=%2377ECBA') no-repeat center center / contain;
-                    }
-                    
-                    .ButtonRight {
-                        height: 50px;
-                        width: 50px;
-                        background: url('https://api.iconify.design/dashicons:arrow-right-alt2.svg?color=%2377ECBA') no-repeat center center / contain;
-                    }
+h1 {
+    color: #7389F7;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+}
+
+.Align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LabelNickname {
+    background-color: #7389F7;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    border-style: double;
+    border-color: #E0F2F6;
+}
+
+.LabelNickname:hover {
+    box-shadow: 10px 5px 5px yellow;
+}
+
+h3 {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+figure {
+    background-image: url('./imgAvatar/macaron.svg');
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.Circle:hover {
+    opacity: .5;
+}
+
+p {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #7389F7;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ButtonLeft {
+    height: 50px;
+    width: 50px;
+    background: url('https://api.iconify.design/dashicons:arrow-left-alt2.svg?color=%2377ECBA') no-repeat center center / contain;
+}
+
+.ButtonRight {
+    height: 50px;
+    width: 50px;
+    background: url('https://api.iconify.design/dashicons:arrow-right-alt2.svg?color=%2377ECBA') no-repeat center center / contain;
+}
