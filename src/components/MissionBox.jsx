@@ -8,7 +8,8 @@ class MissionBox extends Component {
   }
 
   render() {
-    const { consignes } = this.props;
+    const { mission } = this.props;
+    const { consignes } = mission;
     return (
       <div className="container">
         <div>
