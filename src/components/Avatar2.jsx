@@ -46,7 +46,7 @@ class Avatar extends React.Component {
           <div className="ButtonRight" onClick={this.changePic}></div>
         </div>
         <div className="LabelNickname">
-          <h3 className="Nickname" contentEditable="true" onChange={() => { }}>
+          <h3 className="Nickname" contentEditable="true">
             {this.state.nickname}
           </h3>
         </div>
