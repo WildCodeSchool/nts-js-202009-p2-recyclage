@@ -5,7 +5,6 @@ import Title from './Title';
 import FilterList from './FilterList';
 import Footer from './Footer';
 import Maps from './Maps';
-import Trisac from './TriSac';
 
 function Home() {
   return (
@@ -15,7 +14,6 @@ function Home() {
       <IntroCarte />
       <FilterList />
       <Maps />
-      <Trisac />
       <Footer />
     </div>
   );
