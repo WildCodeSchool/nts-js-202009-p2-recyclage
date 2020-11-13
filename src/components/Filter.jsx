@@ -12,16 +12,16 @@ class Filter extends React.Component {
   render() {
     const { filterTitle, filter } = this.props;
     return (
-
-      <div className={this.state.open ? 'containeropen' : 
-      'containerclose'} 
-            onClick={(event) => {
-              const isopen = !this.state.open;
-              this.setState({open: isopen});
-            }}>
-        <h2 className={this.state.open ? 'filtert' : 'filtertopen'} 
-        onClick={(event) => {
-
+      <div
+        className={this.state.open ? 'containeropen' : 'containerclose'}
+        onClick={() => {
+          const isopen = !this.state.open;
+          this.setState({ open: isopen });
+        }}
+      >
+        <h2
+          className={this.state.open ? 'filtert' : 'filtertopen'}
+          onClick={() => {
             const isopen = !this.state.open;
             this.setState({ open: isopen });
           }}
@@ -31,7 +31,9 @@ class Filter extends React.Component {
 
         <div className={this.state.open ? 'open' : 'close'}>
           {filter.map((filter) => (
-            <button className="btn">{filter}</button>
+            <button key={filter} type="button" className="btn">
+              {filter}
+            </button>
           ))}
         </div>
       </div>

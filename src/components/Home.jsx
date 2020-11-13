@@ -6,7 +6,6 @@ import FilterList from './FilterList';
 import Footer from './Footer';
 import Maps from './Maps';
 
-
 function Home() {
   return (
     <div className="home">

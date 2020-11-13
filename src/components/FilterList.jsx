@@ -29,15 +29,15 @@ const typeFilter = [
     filterTitle: 'Lieux et Rdv Tri-sac',
     filter: ['Tri-sac'],
     id: 3,
-  }
-]
+  },
+];
 
 const FilterList = () => (
   <div>
-  { typeFilter.map((typeFilter) => (
-    <Filter {...typeFilter}  key={typeFilter.id}/>))}
- </div>
- );
-
+    {typeFilter.map((typeFilter) => (
+      <Filter {...typeFilter} key={typeFilter.id} />
+    ))}
+  </div>
+);
 
 export default FilterList;

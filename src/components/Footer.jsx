@@ -8,13 +8,13 @@ export default function Footer() {
     <IconContext.Provider value={{ size: '2.5em', color: 'white' }}>
       <div className="social-container">
         <div className="social-icons">
-          <a href="http://facebook.com" external className="picto">
+          <a href="http://facebook.com" className="picto">
             <FaFacebook />
           </a>
-          <a href="http://intagram.com" external className="picto">
+          <a href="http://intagram.com" className="picto">
             <FaInstagram />
           </a>
-          <a href="http://twitter.com" external className="picto">
+          <a href="http://twitter.com" className="picto">
             <FaTwitter />
           </a>
         </div>
