@@ -2,22 +2,18 @@ import React from 'react';
 import axios from 'axios';
 import './Avatar2.css';
 
-const id = {
-  name: {
-    first: 'Charlie',
-  },
-  picture: {
-    large: 'https://randomuser.me/api/portraits/women/60.jpg',
-  },
-};
 
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
+    this.localStorage = window.localStorage;
+    const name = this.localStorage.getItem("Nickname");
+    const pic = this.localStorage.getItem("Avatar");
     this.state = {
-      picture: id.picture.large,
-      nickname: id.name.first,
+      picture: pic || 'https://randomuser.me/api/portraits/women/60.jpg',
+      nickname: name || 'Jacqueline',
     }
+
     this.changePic = this.changePic.bind(this);
   }
 
@@ -25,6 +21,8 @@ class Avatar extends React.Component {
     axios.get('https://randomuser.me/api?nat=fr')
       .then((response) => response.data)
       .then((data) => {
+        this.localStorage.setItem('Nickname', data.results[0].name.first);
+        this.localStorage.setItem('Avatar', data.results[0].picture.large);
         this.setState({
           picture: data.results[0].picture.large,
           nickname: data.results[0].name.first,
@@ -40,6 +38,7 @@ class Avatar extends React.Component {
           <div className="ButtonLeft" onClick={this.changePic}></div>
           <figure onClick={event => {
             const newImage = prompt("Insère l'url de ton image de profil");
+            this.localStorage.setItem('Avatar', newImage);
             this.setState({ picture: newImage });
           }}>
             <img alt="Avatar" src={this.state.picture} className="Circle" />
