@@ -56,22 +56,18 @@ class MissionBoxContainer extends React.Component {
     const mission = missions[index];
     return (
       <div className="Container">
-        <div className="arrows">
-          <div onClick={this.indexDecrement}>
-            <Arrow direction="left" />
-          </div>
+        <div onClick={this.indexDecrement} className="arrows">
+          <Arrow direction="left" />
         </div>
-        <div>
+        <div className="main">
           <div className="pointsDirection">
-            <Points />
+            <Points mission={mission} />
           </div>
           <MissionBox mission={mission} />
           <Button />
         </div>
-        <div className="arrows">
-          <div onClick={this.indexIncrement}>
-            <Arrow direction="right" />
-          </div>
+        <div onClick={this.indexIncrement} className="arrows">
+          <Arrow direction="right" />
         </div>
       </div>
     );

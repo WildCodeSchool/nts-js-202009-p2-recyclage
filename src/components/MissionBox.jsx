@@ -11,12 +11,10 @@ class MissionBox extends Component {
     const { mission } = this.props;
     const { consignes } = mission;
     return (
-      <div className="container">
-        <div>
-          <div className="missionBox">
-            <h2>Ta mission!</h2>
-            <p>{consignes}</p>
-          </div>
+      <div>
+        <div className="missionBox">
+          <h2>Ta mission!</h2>
+          <p>{consignes}</p>
         </div>
       </div>
     );

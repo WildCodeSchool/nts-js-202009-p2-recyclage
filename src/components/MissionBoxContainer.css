@@ -1,10 +1,11 @@
 .Container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.arrows {
-  display: flex;
+.pointsDirection {
+  padding-left: 10px;
+  margin-bottom: -40px;
 }

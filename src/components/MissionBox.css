@@ -5,23 +5,18 @@
   width: 290px;
   color: #ffffff;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .missionBox h2 {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  padding-top: 8px;
   font-size: 24px;
+  padding-top: 5px;
 }
 
 .missionBox p {
   font-size: 15px;
   color: black;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
