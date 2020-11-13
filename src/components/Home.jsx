@@ -13,6 +13,8 @@ function Home() {
       <MissionBoxContainer />
       <IntroCarte />
       <FilterList />
+      <Maps />
+      <Footer />
     </div>
   );
 }
