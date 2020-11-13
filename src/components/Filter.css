@@ -1,64 +1,36 @@
-.containeropen {
+.container {
   background-color: white;
   margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 11em;
-}
-.containerclose {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 11em;
-  transition: all 1s ease-in-out;
 }
 
 .filtert {
   color: #77ecba;
-  transform: translate(0px, 0px);
+  transform: translate(0px, -10px);
 }
 .filtertopen {
   color: #77ecba;
-  transition: 1s ease-in-out;
-  margin: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .btn {
-  border: 2px solid;
   border-radius: 3px;
   border-color: #77ecba;
   color: #77ecba;
-  margin: 0px 5px 7px;
+  border-style: inset;
   background-color: white;
 }
 .open {
-  transform: translate(0px, -10px);
   opacity: 1;
-  transition: 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  transition: 0.5s ease-in-out;
 }
 
 .close {
   transform: translate(0px, -10px);
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.linehr {
-  width: 80%;
-  height: 3px;
-  border: #77ecba;
-  background-color: #77ecba;
 }
