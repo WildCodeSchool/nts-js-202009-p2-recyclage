@@ -12,6 +12,7 @@
   justify-content: flex-start;
 }
 
-p {
+.Points p {
   text-align: center;
+  color: white;
 }
