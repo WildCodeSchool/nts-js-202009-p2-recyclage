@@ -1,5 +1,6 @@
 .social-container {
   height: 407px;
+  width: auto;
   display: flex;
   flex-direction: column;
   flex-flow: row nowrap;
