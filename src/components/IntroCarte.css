@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
 .Intro {
-  padding: 20px;
-  background: url('https://api.iconify.design/bi:geo-alt.svg?color=%23afe7cf')
-      no-repeat center center / contain,
-    #e0f2f6;
-  height: 400px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e0f2f6;
+  height: 195px;
 }
 
 h2 {
@@ -15,4 +14,19 @@ h2 {
   font-size: 2em;
   color: #7389f7;
   text-align: center;
+}
+h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2em;
+  color: #7389f7;
+  text-align: center;
+  padding: 60px;
+  line-height: 33px;
+  padding: 70px;
+}
+
+.icon {
+  background: url('https://api.iconify.design/el:map-marker.svg?color=%2379E9D0')
+    no-repeat center center / contain;
+  background-size: 45%;
 }
