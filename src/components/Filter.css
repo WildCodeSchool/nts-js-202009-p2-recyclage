@@ -1,6 +1,5 @@
 .container {
   background-color: white;
-  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,18 +10,20 @@
   color: #77ecba;
   transform: translate(0px, -10px);
 }
+
 .filtertopen {
   color: #77ecba;
-  transition: 0.5s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .btn {
-  border-radius: 3px;
   border-color: #77ecba;
   color: #77ecba;
-  border-style: inset;
+  border-style: solid;
   background-color: white;
+  font-size: 20px;
 }
+
 .open {
   opacity: 1;
   transition: 0.5s ease-in-out;

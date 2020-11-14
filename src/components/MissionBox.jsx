@@ -13,7 +13,7 @@ class MissionBox extends Component {
     return (
       <div>
         <div className="missionBox">
-          <h2>Ta mission !</h2>
+          <h2 className="missiontitle">Ta mission !</h2>
           <p className="missions">{consignes}</p>
         </div>
       </div>
