@@ -4,20 +4,28 @@ import Button from './Button';
 import Arrow from './Arrow';
 import Points from './Points';
 import './MissionBoxContainer.css';
+import BouteillePlastique from './img/BouteillePlastique-01.svg';
 
 const missions = [
   {
     id: 1,
     consignes:
-      "Ta mission si tu l'acceptes est de jeter 10 bouteilles en plastique. Pour les recycler, jettes-les dans la poubelle Tri'Sac / bac jaune ou un point d'apport volontaire Plastique ou Emballage ménager. ",
+      "Tri 10 bouteilles en plastique. Pour les recycler, jettes-les dans un Tri'Sac jaune ou dans un point d'apport plastique.",
     points: 20,
-    image: 'src/components/img/BouteillePlastique-01.svg',
+    image: { BouteillePlastique },
   },
   {
     id: 2,
     consignes:
-      "Ta mission si tu l'acceptes est de jeter 10 cannettes. Pour les recycler, jette-les dans la poubelle Tri'Sac / bac jaune ou dans un point d'apport volontaire Emballage ménager. ",
+      "Tri 10 cannettes. Pour les recycler, jette-les dans un Tri'Sac jaune ou dans un point d'apport ménager. ",
     points: 10,
+    image: '',
+  },
+  {
+    id: 3,
+    consignes:
+      'Tri 10 bouteille en verre. Pour les recycler, jette-les dans des conteneur à verre. ',
+    points: 30,
     image: '',
   },
 ];

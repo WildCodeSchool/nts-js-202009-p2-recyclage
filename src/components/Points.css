@@ -12,7 +12,8 @@
   justify-content: flex-start;
 }
 
-.Points p {
-  text-align: center;
+.points {
   color: white;
+  margin: 0;
+  padding: 5px;
 }
