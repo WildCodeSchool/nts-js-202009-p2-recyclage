@@ -6,7 +6,23 @@
   justify-content: center;
   align-items: center;
 }
+.containeropen {
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.containerclose {
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .filtert {
   color: #77ecba;
   transform: translate(0px, -10px);
@@ -16,7 +32,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.btn {
+.btnfilter {
   border-radius: 3px;
   border-color: #77ecba;
   color: #77ecba;

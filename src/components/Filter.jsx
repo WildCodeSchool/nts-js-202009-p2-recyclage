@@ -31,7 +31,7 @@ class Filter extends React.Component {
 
         <div className={this.state.open ? 'open' : 'close'}>
           {filter.map((filter) => (
-            <button key={filter} type="button" className="btn">
+            <button key={filter} type="button" className="btnfilter">
               {filter}
             </button>
           ))}
