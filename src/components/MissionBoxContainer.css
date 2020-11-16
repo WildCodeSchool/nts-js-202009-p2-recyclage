@@ -1,0 +1,11 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointsDirection {
+  padding-left: 10px;
+  margin-bottom: -40px;
+}
