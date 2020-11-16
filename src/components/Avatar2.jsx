@@ -40,10 +40,7 @@ class Avatar extends React.Component {
     const { nickname, picture } = this.state;
     return (
       <div className="Avatar">
-        <h1>
-          Bienvenue,
-          {nickname}!
-        </h1>
+        <h1>Bienvenue, {nickname}!</h1>
         <div className="Align">
           <div className="ButtonLeft" onClick={this.changePic}></div>
           <figure
