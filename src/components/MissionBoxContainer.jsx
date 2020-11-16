@@ -36,7 +36,6 @@ class MissionBoxContainer extends React.Component {
     if (this.state.index < missions.length - 1) {
       const plusIndex = this.state.index + 1;
       this.setState({ index: plusIndex });
-      console.log(this.state.index);
     } else {
       this.setState({ index: 0 });
     }
