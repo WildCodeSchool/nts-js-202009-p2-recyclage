@@ -9,7 +9,7 @@ const typeFilter = [
       'Carton',
       'Plastique',
       'Electroniques',
-      'Déchets dangereux',
+      'Toxiques',
       'Encombrants',
       'Alimentaires',
     ],
@@ -18,10 +18,10 @@ const typeFilter = [
   {
     filterTitle: 'Filtrer par type de collecte',
     filter: [
-      'Compost',
       'Colonnes enterrées',
       'Colonnes aériennes',
       'Déchetterie',
+      'Compost',
     ],
     id: 2,
   },

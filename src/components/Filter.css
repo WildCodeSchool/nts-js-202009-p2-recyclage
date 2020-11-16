@@ -6,14 +6,28 @@
   align-items: center;
 }
 
+.containeropen {
+  margin: 20px;
+  padding: 5px 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.containerclose {
+  margin: 20px;
+  padding: 5px 0;
+  font-family: 'Nunito', sans-serif;
+}
+
 .filtert {
   color: #77ecba;
   transform: translate(0px, -10px);
+  font-size: 25px;
 }
 
 .filtertopen {
   color: #77ecba;
   transition: 0.1s ease-in-out;
+  font-size: 25px;
 }
 
 .btn {
@@ -22,11 +36,21 @@
   border-style: solid;
   background-color: white;
   font-size: 20px;
+  margin: 3px 5px;
+  flex: 1;
+  font-family: 'Nunito', sans-serif;
 }
 
+.btn:hover {
+  background-color: #77ecba;
+  color: white;
+}
 .open {
   opacity: 1;
   transition: 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .close {
