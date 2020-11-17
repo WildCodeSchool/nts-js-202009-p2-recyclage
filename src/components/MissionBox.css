@@ -1,22 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 .missionBox {
   background-color: #9ef2ff;
-  height: 170px;
-  width: 290px;
+  height: 125px;
+  width: 272px;
   color: #ffffff;
-  text-align: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: justify;
 }
 
-.missionBox h2 {
+.missiontitle {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 24px;
-  padding-top: 5px;
+  margin: 0;
+  color: #7389f7;
+  text-align: center;
 }
 
-.missionBox p {
-  font-size: 13px;
-  color: black;
+.missions {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.932);
+  padding-left: 15px;
+  padding-right: 5px;
+  display: flex;
+  text-align: start;
+  margin-block-start: -5px;
 }

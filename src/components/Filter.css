@@ -1,6 +1,5 @@
 .container {
   background-color: white;
-  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,8 +10,7 @@
   margin: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 
 .containerclose {
@@ -20,28 +18,46 @@
   margin: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 .filtert {
   color: #77ecba;
   transform: translate(0px, -10px);
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
 }
+
 .filtertopen {
   color: #77ecba;
-  transition: 0.5s ease-in-out;
+  transition: 0.1s ease-in-out;
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
 }
 
 .btnfilter {
   border-radius: 3px;
   border-color: #77ecba;
   color: #77ecba;
-  border-style: inset;
+  border-style: solid;
   background-color: white;
+  font-size: 19px;
+  margin: 3px 8px;
+  flex: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btnfilter:hover {
+  background-color: #77ecba;
+  color: white;
 }
 .open {
   opacity: 1;
   transition: 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .close {

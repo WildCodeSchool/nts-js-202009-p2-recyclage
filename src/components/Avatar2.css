@@ -77,15 +77,15 @@ p {
 }
 
 .ButtonLeft {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: url('https://api.iconify.design/dashicons:arrow-left-alt2.svg?color=%2377ECBA')
     no-repeat center center / contain;
 }
 
 .ButtonRight {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background: url('https://api.iconify.design/dashicons:arrow-right-alt2.svg?color=%2377ECBA')
     no-repeat center center / contain;
 }

@@ -12,7 +12,7 @@ class Points extends Component {
     const { points } = mission;
     return (
       <div className="Points">
-        <p>{points} pts</p>
+        <p className="points">{points} pts</p>
       </div>
     );
   }
