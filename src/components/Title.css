@@ -1,51 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
 .Title {
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.Baseline1 {
-    margin: 10px;
-    transform: rotate(-8deg);
-    font-size: 2em;
-    color: #1EDEC7;
-    background-color: yellow;
-    font-family: 'Nunito', sans-serif;
-    animation-name: slideIn;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-}
-
-.Baseline2 {
-    margin: 10px;
-    font-size: 3em;
-    color: yellow;
-    font-family: 'Nunito', sans-serif;
-    background-color: #1EDEC7;
-    text-align: center;
-}
-
-@keyframes slideIn {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(352deg);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .Baseline1 {
-        font-size: 3em;
-    }
-    .Baseline2 {
-        font-size: 5em;
-    }
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 50px;
 }

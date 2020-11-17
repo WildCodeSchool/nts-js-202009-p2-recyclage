@@ -4,7 +4,9 @@ import './IntroCarte.css';
 function IntroCarte() {
   return (
     <div className="Intro">
-      <h1>Où trier près de chez toi ?</h1>
+      <div className="icon">
+        <h4>Trouve le point de collecte plus proche de chez toi !</h4>
+      </div>
     </div>
   );
 }

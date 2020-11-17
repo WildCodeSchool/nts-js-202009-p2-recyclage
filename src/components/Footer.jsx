@@ -5,7 +5,7 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <IconContext.Provider value={{ size: '2.5em', color: 'white' }}>
+    <IconContext.Provider value={{ size: '2em', color: 'white' }}>
       <div className="social-container">
         <div className="social-icons">
           <a href="http://facebook.com" className="picto">
