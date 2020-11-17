@@ -5,43 +5,50 @@
   justify-content: center;
   align-items: center;
 }
-
 .containeropen {
-  margin: 20px;
-  padding: 5px 0;
-  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .containerclose {
-  margin: 20px;
-  padding: 5px 0;
-  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
-
 .filtert {
   color: #77ecba;
   transform: translate(0px, -10px);
-  font-size: 25px;
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
 }
 
 .filtertopen {
   color: #77ecba;
   transition: 0.1s ease-in-out;
-  font-size: 25px;
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
 }
 
-.btn {
+.btnfilter {
+  border-radius: 3px;
   border-color: #77ecba;
   color: #77ecba;
   border-style: solid;
   background-color: white;
-  font-size: 20px;
-  margin: 3px 5px;
+  font-size: 19px;
+  margin: 3px 8px;
   flex: 1;
   font-family: 'Nunito', sans-serif;
 }
 
-.btn:hover {
+.btnfilter:hover {
   background-color: #77ecba;
   color: white;
 }
