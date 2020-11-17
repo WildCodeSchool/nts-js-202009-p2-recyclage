@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Maps.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import TriSac from './TriSac';
+import UnderBins from './UnderBins';
 
 class Maps extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class Maps extends Component {
   }
 
   render() {
-    // const position = [this.state.location.lat, this.state.location.lng];//
     const { lat, lng } = this.state;
     const { zoom } = this.state;
     const position = {
@@ -33,6 +33,7 @@ contributors'
           />
 
           <TriSac />
+          <UnderBins />
         </MapContainer>
       </div>
     );
