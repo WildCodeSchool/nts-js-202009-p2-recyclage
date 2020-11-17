@@ -63,8 +63,10 @@ class DataAvatar extends Component {
   constructor(props) {
     super(props);
     this.localStorage = window.localStorage;
+    const avatar = this.localStorage.getItem('Avatar');
     this.state = {
       index: 0,
+      picture: dataImg[0].image || avatar,
     };
     this.right = this.right.bind(this);
     this.left = this.left.bind(this);
@@ -74,8 +76,10 @@ class DataAvatar extends Component {
     if (this.state.index > 0) {
       const leftIndex = this.state.index - 1;
       this.setState({ index: leftIndex });
+      this.setState({ picture: dataImg[this.state.index].image });
     } else {
       this.setState({ index: 13 });
+      this.setState({ picture: dataImg[this.state.index].image });
     }
   }
 
@@ -83,14 +87,16 @@ class DataAvatar extends Component {
     if (this.state.index < 13) {
       const rightIndex = this.state.index + 1;
       this.setState({ index: rightIndex });
+      this.setState({ picture: dataImg[this.state.index].image });
     } else {
       this.setState({ index: 0 });
+      this.setState({ picture: dataImg[this.state.index].image });
     }
   }
 
   render() {
-    const { index } = this.state;
-    const avatar = dataImg[index].image;
+    const { picture } = this.state;
+    this.localStorage.setItem('Avatar', picture);
     return (
       <div className="Avatar">
         <div className="Align">
@@ -101,7 +107,7 @@ class DataAvatar extends Component {
               this.setState({ picture: newImage });
             }}
           >
-            <img alt="Avatar" src={avatar} className="Circle" />
+            <img alt="Avatar" src={picture} className="Circle" />
           </figure>
           <div className="ButtonRight" onClick={this.right}></div>
         </div>
