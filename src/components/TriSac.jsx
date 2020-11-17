@@ -14,9 +14,14 @@ class TriSac extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        'https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_dates-lieux-retrait-sacs-trisac-rendez-vous-quartier-nantes&q=&facet=type_lieu&facet=quartier&facet=type_distribution&facet=location&facet=adresse&facet=numero&apikey=5f0a64b92cf369cddcf2977da97cfad9b6aac115497c3cdbb8a624b5'
-      )
+      .get('https://data.nantesmetropole.fr/api/records/1.0/search/?', {
+        params: {
+          dataset:
+            '244400404_dates-lieux-retrait-sacs-trisac-rendez-vous-quartier-nantes',
+          rows: 50,
+          apikey: '5f0a64b92cf369cddcf2977da97cfad9b6aac115497c3cdbb8a624b5',
+        },
+      })
       .then((response) => {
         this.setState({
           triSacList: response.data.records,
