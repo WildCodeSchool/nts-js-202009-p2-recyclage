@@ -3,6 +3,7 @@ import './Maps.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import TriSac from './TriSac';
 import UnderBins from './UnderBins';
+import Under from './Under';
 
 class Maps extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ contributors'
 
           <TriSac />
           <UnderBins />
+          <Under />
         </MapContainer>
       </div>
     );
