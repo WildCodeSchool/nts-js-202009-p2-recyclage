@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Filter.css';
 
 class Filter extends React.Component {
@@ -11,25 +12,26 @@ class Filter extends React.Component {
 
   render() {
     const { filterTitle, filter } = this.props;
+    const { open } = this.state;
     return (
       <div
-        className={this.state.open ? 'containeropen' : 'containerclose'}
+        className={open ? 'containeropen' : 'containerclose'}
         onClick={() => {
-          const isopen = !this.state.open;
+          const isopen = !open;
           this.setState({ open: isopen });
         }}
       >
         <h2
-          className={this.state.open ? 'filtert' : 'filtertopen'}
+          className={open ? 'filtert' : 'filtertopen'}
           onClick={() => {
-            const isopen = !this.state.open;
+            const isopen = !open;
             this.setState({ open: isopen });
           }}
         >
           {filterTitle}
         </h2>
 
-        <div className={this.state.open ? 'open' : 'close'}>
+        <div className={open ? 'open' : 'close'}>
           {filter.map((filter) => (
             <button key={filter} type="button" className="btnfilter">
               {filter}
@@ -40,5 +42,11 @@ class Filter extends React.Component {
     );
   }
 }
+
+Filter.propTypes = {
+  filterTitle: PropTypes.string.isRequired,
+  filter: PropTypes.array,
+  open: PropTypes.string.isRequired,
+};
 
 export default Filter;

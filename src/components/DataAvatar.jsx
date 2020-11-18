@@ -73,8 +73,9 @@ class DataAvatar extends Component {
   }
 
   left() {
-    if (this.state.index > 0) {
-      const leftIndex = this.state.index - 1;
+    const { index } = this.state;
+    if (index > 0) {
+      const leftIndex = index - 1;
       this.setState({ index: leftIndex });
       this.setState({ picture: dataImg[this.state.index].image });
     } else {
@@ -84,8 +85,9 @@ class DataAvatar extends Component {
   }
 
   right() {
-    if (this.state.index < 13) {
-      const rightIndex = this.state.index + 1;
+    const { index } = this.state;
+    if (index < 13) {
+      const rightIndex = index + 1;
       this.setState({ index: rightIndex });
       this.setState({ picture: dataImg[this.state.index].image });
     } else {
