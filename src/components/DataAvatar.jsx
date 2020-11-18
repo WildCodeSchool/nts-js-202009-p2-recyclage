@@ -66,7 +66,7 @@ class DataAvatar extends Component {
     const avatar = this.localStorage.getItem('Avatar');
     this.state = {
       index: 0,
-      picture: dataImg[0].image || avatar,
+      picture: avatar || dataImg[0].image,
     };
     this.right = this.right.bind(this);
     this.left = this.left.bind(this);
