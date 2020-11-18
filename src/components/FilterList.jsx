@@ -4,25 +4,12 @@ import Filter from './Filter';
 const typeFilter = [
   {
     filterTitle: 'Filtrer par déchets',
-    filter: [
-      'Verre',
-      'Carton',
-      'Plastique',
-      'Electroniques',
-      'Toxiques',
-      'Encombrants',
-      'Alimentaires',
-    ],
+    filter: ['Verre', 'Carton', 'Plastique', 'Encombrants', 'Alimentaires'],
     id: 1,
   },
   {
     filterTitle: 'Filtrer par type de collecte',
-    filter: [
-      'Colonnes enterrées',
-      'Colonnes aériennes',
-      'Déchetterie',
-      'Compost',
-    ],
+    filter: ['Colonnes enterrées', 'Colonnes aériennes'],
     id: 2,
   },
   {
