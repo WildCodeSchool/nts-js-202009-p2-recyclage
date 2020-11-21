@@ -10,6 +10,11 @@ import Footer from './Footer';
 
 function Home() {
   const [value, setValue] = useState(false);
+  const [filter, setFilter] = useState('');
+
+  const gotFilter = (filterValue) => {
+    setFilter(filterValue);
+  };
   return (
     <div className="home">
       <Header />
@@ -21,8 +26,8 @@ function Home() {
         onColor="#79E9D0"
         handleToggle={() => setValue(!value)}
       />
-      <FilterList />
-      <Maps />
+      <FilterList gotFilter={gotFilter} />
+      <Maps filter={filter} />
       <Footer />
     </div>
   );

@@ -1,30 +1,41 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Filter from './Filter';
 
 const typeFilter = [
   {
     filterTitle: 'Filtrer par déchets',
-    filter: ['Verre', 'Carton', 'Plastique', 'Encombrants', 'Alimentaires'],
+    filters: ['Verre', 'Déchet sec', 'Carton', 'Ordure ménagère'],
     id: 1,
   },
   {
     filterTitle: 'Filtrer par type de collecte',
-    filter: ['Colonnes enterrées', 'Colonnes aériennes'],
+    filters: ['Colonnes enterrées', 'Colonnes aériennes'],
     id: 2,
   },
   {
     filterTitle: 'Lieux et Rdv Tri-sac',
-    filter: ['Tri-sac'],
+    filters: ['Tri-sac'],
     id: 3,
   },
 ];
 
-const FilterList = () => (
-  <div>
-    {typeFilter.map((typeFilter) => (
-      <Filter {...typeFilter} key={typeFilter.id} />
-    ))}
-  </div>
-);
+const FilterList = (props) => {
+  const { gotFilter } = props;
+  const getFilter = (filter) => {
+    gotFilter(filter);
+  };
+  return (
+    <div>
+      {typeFilter.map((typeFilter) => (
+        <Filter getFilter={getFilter} {...typeFilter} key={typeFilter.id} />
+      ))}
+    </div>
+  );
+};
+
+FilterList.propTypes = {
+  gotFilter: PropTypes.string.isRequired,
+};
 
 export default FilterList;

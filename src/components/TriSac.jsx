@@ -18,7 +18,7 @@ class TriSac extends Component {
         params: {
           dataset:
             '244400404_dates-lieux-retrait-sacs-trisac-rendez-vous-quartier-nantes',
-          rows: 0,
+          rows: 1000,
           apikey: '5f0a64b92cf369cddcf2977da97cfad9b6aac115497c3cdbb8a624b5',
         },
       })
@@ -31,6 +31,7 @@ class TriSac extends Component {
 
   render() {
     const { triSacList } = this.state;
+    const { filter } = this.props;
     const myIcon = new L.Icon({
       iconUrl: 'https://www.flaticon.com/svg/static/icons/svg/0/619.svg',
       iconSize: [25, 41],
@@ -39,29 +40,36 @@ class TriSac extends Component {
     });
     return (
       <>
-        {triSacList.map((sacList) => {
-          return (
-            <Marker
-              key={sacList.fields.location}
-              position={sacList.fields.location}
-              icon={myIcon}
-            >
-              <Popup>
-                <p>Tri'Sac</p>
+        {triSacList
+          .filter((filterTriSac) => {
+            if (filter.filter === 'Tri-sac') {
+              return true;
+            }
+            return false;
+          })
+          .map((sacList) => {
+            return (
+              <Marker
+                key={sacList.fields.location}
+                position={sacList.fields.location}
+                icon={myIcon}
+              >
+                <Popup>
+                  <p>Tri'Sac</p>
 
-                <p>
-                  Adresse:
-                  {sacList.fields.numero}
-                  {sacList.fields.adresse}
-                </p>
-                <p>
-                  Ville:
-                  {sacList.fields.commune}
-                </p>
-              </Popup>
-            </Marker>
-          );
-        })}
+                  <p>
+                    Adresse:
+                    {sacList.fields.numero}
+                    {sacList.fields.adresse}
+                  </p>
+                  <p>
+                    Ville:
+                    {sacList.fields.commune}
+                  </p>
+                </Popup>
+              </Marker>
+            );
+          })}
       </>
     );
   }

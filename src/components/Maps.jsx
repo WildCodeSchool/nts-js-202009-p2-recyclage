@@ -3,7 +3,7 @@ import './Maps.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import TriSac from './TriSac';
 import UnderBins from './UnderBins';
-import Under from './Under';
+import Bins from './Bins';
 
 class Maps extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class Maps extends Component {
   render() {
     const { lat, lng } = this.state;
     const { zoom } = this.state;
+    const filter = this.props;
     const position = {
       lat,
       lng,
@@ -33,9 +34,9 @@ contributors'
 {z}/{x}/{y}.png"
           />
 
-          <TriSac />
-          <UnderBins />
-          <Under />
+          <TriSac filter={filter} />
+          <UnderBins filter={filter} />
+          <Bins filter={filter} />
         </MapContainer>
       </div>
     );
