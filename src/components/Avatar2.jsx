@@ -2,6 +2,8 @@ import React from 'react';
 import './Avatar2.css';
 import DataAvatar from './DataAvatar';
 
+const MAX_LENGTH = 20;
+
 class Avatar extends React.Component {
   constructor(props) {
     super(props);
@@ -13,33 +15,50 @@ class Avatar extends React.Component {
     this.changeNickName = this.changeNickName.bind(this);
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+  }
+
   changeNickName(event) {
     const newNickName = event.target.value;
-    this.localStorage.setItem('newNickName', newNickName);
-    this.setState({
-      nickname: newNickName,
-    });
+    if (newNickName.length <= MAX_LENGTH) {
+      this.localStorage.setItem('newNickName', newNickName);
+      this.setState({
+        nickname: newNickName,
+      });
+    }
   }
 
   render() {
     const { nickname } = this.state;
+    const maxReached = nickname.length >= MAX_LENGTH;
+    const numNickname = MAX_LENGTH - nickname.length;
+
     return (
       <div className="Avatar">
         <h1>Bienvenue, {nickname} !</h1>
         <DataAvatar />
-        <div className="LabelNickname">
+        <form className="LabelNickname" onSubmit={this.handleSubmit}>
           <h3 className="EnterNickName">Entre ton pseudo :</h3>
           <input
+            className={maxReached ? 'lenght-max-readched' : 'length-ok'}
             type="text"
             id="nickname"
             name="nickname"
-            minLength="3"
-            maxLength="14"
             placeholder="ici"
-            autoComplete="off"
+            value={nickname}
             onChange={this.changeNickName}
-          ></input>
-        </div>
+          />
+          <div>
+            <small
+              className={
+                maxReached ? 'smallCharactersMax' : 'smallCharactersOk'
+              }
+            >
+              {numNickname} caractères restant
+            </small>
+          </div>
+        </form>
         <p>
           Choisis un personnage ou édite-le en cliquant sur la photo et le texte
         </p>

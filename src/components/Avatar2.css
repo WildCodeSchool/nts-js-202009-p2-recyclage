@@ -35,6 +35,29 @@ h1 {
   box-shadow: 10px 5px 5px yellow;
 }
 
+input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+input:focus {
+  outline: none;
+}
+
+.length-ok {
+  border: 3px solid #9ae6b4;
+}
+.lenght-max-readched {
+  border: 3px solid #fc8181;
+}
+
+.smallCharactersMax {
+  color: #fc8181;
+}
+
+.smallCharactersOk {
+  color: #ddd;
+}
+
 .EnterNickName {
   color: white;
   font-family: 'Nunito', sans-serif;
