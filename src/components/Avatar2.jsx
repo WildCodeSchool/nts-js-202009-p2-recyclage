@@ -25,17 +25,16 @@ class Avatar extends React.Component {
     const { nickname } = this.state;
     return (
       <div className="Avatar">
-        <h1>Bienvenue, {nickname} !</h1>
+        <h1>Bienvenue {nickname} !</h1>
         <DataAvatar />
         <div className="LabelNickname">
-          <h3 className="EnterNickName">Entre ton pseudo :</h3>
           <input
             type="text"
             id="nickname"
             name="nickname"
             minLength="3"
             maxLength="14"
-            placeholder="ici"
+            placeholder="Entre ton pseudo"
             autoComplete="off"
             onChange={this.changeNickName}
           ></input>

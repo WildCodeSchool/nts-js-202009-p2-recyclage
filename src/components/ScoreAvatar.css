@@ -1,0 +1,8 @@
+.ScoreAvatar {
+    display: flex;
+    justify-content: center;
+}
+
+.Jauge {
+    padding-top: 25px;
+}
