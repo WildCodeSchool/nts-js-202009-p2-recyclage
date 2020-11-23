@@ -12,6 +12,11 @@ class ScoreAvatar extends React.Component {
       percent: local || 0,
       points: 0.3,
     };
+    this.updateProgress = this.updateProgress.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateProgress('percent', this.state.percent + this.state.points);
   }
 
   updateProgress(field, val) {
@@ -32,16 +37,6 @@ class ScoreAvatar extends React.Component {
       <div className="ScoreAvatar">
         <div className="Jauge">
           <ProgressBar width={300} percent={this.state.percent} />
-          <button
-            onClick={() =>
-              this.updateProgress(
-                'percent',
-                this.state.percent + this.state.points
-              )
-            }
-          >
-            Add points
-          </button>
           <h3>{result} points !</h3>
         </div>
       </div>

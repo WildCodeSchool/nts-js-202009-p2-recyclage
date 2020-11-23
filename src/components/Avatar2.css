@@ -7,8 +7,9 @@
     align-items: center;
 }
 
-h1 {
+.Avatar h1 {
     color: #7389f7;
+    text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: 2em;
 }
@@ -23,7 +24,7 @@ h1 {
     height: 30px;
     display: flex;
     align-items: center;
-    background-color: #7389f7;
+    background-color: #ddd;
     padding-right: 10px;
     padding-left: 10px;
     margin-top: 10px;
@@ -34,7 +35,32 @@ h1 {
 }
 
 .LabelNickname:hover {
-    box-shadow: 10px 5px 5px yellow;
+    box-shadow: 10px 5px 5px #7389f7;
+}
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.length-ok {
+    border: 3px solid rgb(119, 236, 186);
+}
+
+.lenght-max-readched {
+    border: 3px solid #fc8181;
+}
+
+.smallCharactersMax {
+    color: #fc8181;
+}
+
+.smallCharactersOk {
+    color: rgb(119, 236, 186);
 }
 
 .EnterNickName {
@@ -91,5 +117,9 @@ p {
 }
 
 input {
-    background-color: #77ecba;
+    background-color: white;
+}
+
+small {
+    color: black;
 }

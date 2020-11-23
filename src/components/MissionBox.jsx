@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './MissionBox.css';
 
 class MissionBox extends Component {
@@ -20,5 +21,14 @@ class MissionBox extends Component {
     );
   }
 }
+
+MissionBox.propTypes = {
+  mission: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    consignes: PropTypes.string.isRequired,
+    points: PropTypes.number.isRequired,
+    image: PropTypes.object.isRequired,
+  }),
+};
 
 export default MissionBox;
