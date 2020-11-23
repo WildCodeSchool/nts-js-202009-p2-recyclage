@@ -58,7 +58,7 @@ class Bins extends Component {
               >
                 <Popup>
                   <p>Colonnes aériennes</p>
-                  <p>Comumune: {bins.fields.commune}</p>
+                  <p>Commune: {bins.fields.commune}</p>
                   <p>Adresse: {bins.fields.adresse}</p>
                 </Popup>
               </Marker>

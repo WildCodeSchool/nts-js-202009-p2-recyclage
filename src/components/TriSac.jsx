@@ -63,7 +63,7 @@ class TriSac extends Component {
                     {sacList.fields.adresse}
                   </p>
                   <p>
-                    Ville:
+                    Commune:
                     {sacList.fields.commune}
                   </p>
                 </Popup>

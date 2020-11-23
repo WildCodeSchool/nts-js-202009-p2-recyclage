@@ -35,7 +35,7 @@ const FilterList = (props) => {
 };
 
 FilterList.propTypes = {
-  gotFilter: PropTypes.string.isRequired,
+  gotFilter: PropTypes.func.isRequired,
 };
 
 export default FilterList;
