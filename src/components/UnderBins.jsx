@@ -59,7 +59,7 @@ class UnderBins extends Component {
               >
                 <Popup>
                   <p>Colonnes enterrées</p>
-                  <p>Comumune: {underBins.fields.commune}</p>
+                  <p>Commune: {underBins.fields.commune}</p>
                   <p>Adresse: {underBins.fields.adresse}</p>
                 </Popup>
               </Marker>
