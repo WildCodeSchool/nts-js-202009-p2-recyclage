@@ -9,7 +9,7 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: props.open,
+      open: false,
     };
   }
 
@@ -55,9 +55,8 @@ class Filter extends React.Component {
 
 Filter.propTypes = {
   filterTitle: PropTypes.string.isRequired,
-  filters: PropTypes.arrayOf.isRequired,
-  open: PropTypes.string.isRequired,
-  getFilter: PropTypes.string.isRequired,
+  filters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  getFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;
