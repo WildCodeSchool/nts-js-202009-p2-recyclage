@@ -4,11 +4,11 @@ import './Maps.css';
 import L from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 
-class TriSac extends Component {
+class Bins extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      triSacList: [],
+      binsList: [],
     };
   }
 
@@ -16,21 +16,20 @@ class TriSac extends Component {
     axios
       .get('https://data.nantesmetropole.fr/api/records/1.0/search/?', {
         params: {
-          dataset:
-            '244400404_dates-lieux-retrait-sacs-trisac-rendez-vous-quartier-nantes',
+          dataset: '244400404_colonnes-aeriennes-nantes-metropole',
           rows: 1000,
           apikey: '5f0a64b92cf369cddcf2977da97cfad9b6aac115497c3cdbb8a624b5',
         },
       })
       .then((response) => {
         this.setState({
-          triSacList: response.data.records,
+          binsList: response.data.records,
         });
       });
   }
 
   render() {
-    const { triSacList } = this.state;
+    const { binsList } = this.state;
     const { filter } = this.props;
     const myIcon = new L.Icon({
       iconUrl: 'https://www.flaticon.com/svg/static/icons/svg/0/619.svg',
@@ -40,32 +39,27 @@ class TriSac extends Component {
     });
     return (
       <>
-        {triSacList
-          .filter((filterTriSac) => {
-            if (filter.filter === 'Tri-sac') {
+        {binsList
+          .filter((filterBins) => {
+            if (filterBins.fields.type_dechet === filter.filter) {
+              return true;
+            }
+            if (filter.filter === 'Colonnes aériennes') {
               return true;
             }
             return false;
           })
-          .map((sacList) => {
+          .map((bins) => {
             return (
               <Marker
-                key={sacList.fields.location}
-                position={sacList.fields.location}
+                key={bins.fields.id_colonne}
+                position={bins.fields.geo_point_2d}
                 icon={myIcon}
               >
                 <Popup>
-                  <p>Tri'Sac</p>
-
-                  <p>
-                    Adresse:
-                    {sacList.fields.numero}
-                    {sacList.fields.adresse}
-                  </p>
-                  <p>
-                    Commune:
-                    {sacList.fields.commune}
-                  </p>
+                  <p>Colonnes aériennes</p>
+                  <p>Commune: {bins.fields.commune}</p>
+                  <p>Adresse: {bins.fields.adresse}</p>
                 </Popup>
               </Marker>
             );
@@ -75,4 +69,4 @@ class TriSac extends Component {
   }
 }
 
-export default TriSac;
+export default Bins;

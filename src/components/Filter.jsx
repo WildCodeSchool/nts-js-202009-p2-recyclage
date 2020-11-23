@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Filter.css';
@@ -6,12 +9,12 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: props.open,
+      open: false,
     };
   }
 
   render() {
-    const { filterTitle, filter } = this.props;
+    const { filterTitle, filters, getFilter } = this.props;
     const { open } = this.state;
     return (
       <div
@@ -32,8 +35,15 @@ class Filter extends React.Component {
         </h2>
 
         <div className={open ? 'open' : 'close'}>
-          {filter.map((filter) => (
-            <button key={filter} type="button" className="btnfilter">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => {
+                getFilter(filter);
+              }}
+              type="button"
+              className="btnfilter"
+            >
               {filter}
             </button>
           ))}
@@ -45,8 +55,8 @@ class Filter extends React.Component {
 
 Filter.propTypes = {
   filterTitle: PropTypes.string.isRequired,
-  filter: PropTypes.array,
-  open: PropTypes.string.isRequired,
+  filters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  getFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;

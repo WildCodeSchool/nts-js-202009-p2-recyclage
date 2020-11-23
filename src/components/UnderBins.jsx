@@ -17,7 +17,7 @@ class UnderBins extends Component {
       .get('https://data.nantesmetropole.fr/api/records/1.0/search/?', {
         params: {
           dataset: '244400404_colonnes-enterrees-nantes-metropole',
-          rows: 0,
+          rows: 1000,
           apikey: '5f0a64b92cf369cddcf2977da97cfad9b6aac115497c3cdbb8a624b5',
         },
       })
@@ -30,6 +30,7 @@ class UnderBins extends Component {
 
   render() {
     const { underBinsList } = this.state;
+    const { filter } = this.props;
     const myIcon = new L.Icon({
       iconUrl: 'https://www.flaticon.com/svg/static/icons/svg/0/619.svg',
       iconSize: [25, 41],
@@ -38,21 +39,32 @@ class UnderBins extends Component {
     });
     return (
       <>
-        {underBinsList.map((underBins) => {
-          return (
-            <Marker
-              key={underBins.fields.id_colonne}
-              position={underBins.fields.geo_point_2d}
-              icon={myIcon}
-            >
-              <Popup>
-                <p>Colonnes enterrées</p>
-                <p>Comumune: {underBins.fields.commune}</p>
-                <p>Adresse: {underBins.fields.adresse}</p>
-              </Popup>
-            </Marker>
-          );
-        })}
+        {underBinsList
+          .filter((bin) => {
+            // faire un filter sur underbinslist en se basant sur un filter recu des props
+            if (bin.fields.type_dechet === filter.filter) {
+              return true;
+            }
+            if (filter.filter === 'Colonnes enterrées') {
+              return true;
+            }
+            return false;
+          })
+          .map((underBins) => {
+            return (
+              <Marker
+                key={underBins.fields.id_colonne}
+                position={underBins.fields.geo_point_2d}
+                icon={myIcon}
+              >
+                <Popup>
+                  <p>Colonnes enterrées</p>
+                  <p>Commune: {underBins.fields.commune}</p>
+                  <p>Adresse: {underBins.fields.adresse}</p>
+                </Popup>
+              </Marker>
+            );
+          })}
       </>
     );
   }

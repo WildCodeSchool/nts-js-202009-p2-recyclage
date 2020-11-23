@@ -106,7 +106,7 @@ class DataAvatar extends Component {
           <figure
             onClick={(event) => {
               const newImage = prompt("Insère l'url de ton image de profil");
-              this.setState({ picture: newImage });
+              this.setState({ picture: newImage || picture });
             }}
           >
             <img alt="Avatar" src={picture} className="Circle" />
