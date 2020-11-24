@@ -39,14 +39,12 @@ class Avatar extends React.Component {
         <h1>Bienvenue {nickname} !</h1>
         <DataAvatar />
         <div>
-            <small
-              className={
-                maxReached ? 'smallCharactersMax' : 'smallCharactersOk'
-              }
-            >
-              {numNickname} caractères restants
-            </small>
-          </div>
+          <small
+            className={maxReached ? 'smallCharactersMax' : 'smallCharactersOk'}
+          >
+            {numNickname} caractères restants
+          </small>
+        </div>
         <form className="LabelNickname" onSubmit={this.handleSubmit}>
           <input
             className={maxReached ? 'lenght-max-readched' : 'length-ok'}
@@ -54,7 +52,6 @@ class Avatar extends React.Component {
             id="nickname"
             name="nickname"
             minLength="3"
-            maxLength="20"
             placeholder="Entre ton pseudo"
             autoComplete="off"
             onChange={this.changeNickName}

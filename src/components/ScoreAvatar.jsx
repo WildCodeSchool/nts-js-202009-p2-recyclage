@@ -7,7 +7,6 @@ class ScoreAvatar extends React.Component {
     super(props);
     this.localStorage = window.localStorage;
     const local = parseFloat(this.localStorage.getItem('Progress'));
-    console.log(local);
     this.state = {
       percent: local || 0,
       points: 0.3,
