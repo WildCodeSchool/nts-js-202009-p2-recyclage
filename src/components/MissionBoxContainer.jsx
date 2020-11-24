@@ -10,7 +10,7 @@ const missions = [
   {
     id: 1,
     consignes:
-      "Recycle tes bouteilles en plastique, jettes-les dans un Tri'Sac jaune ou dans un point d'apport plastique.",
+      "Recycle tes bouteilles en plastique, jette-les dans un Tri'Sac jaune ou dans un point d'apport plastique.",
     points: 20,
     image: { BouteillePlastique },
   },
@@ -31,14 +31,14 @@ const missions = [
   {
     id: 4,
     consignes:
-      'Tri tes déchets électroniques, ampoules, piles,.. dans des points de dépôts appropriés. ',
+      'Trie tes déchets électroniques, ampoules, piles,... en déchetterie ',
     points: 10,
     image: '',
   },
   {
     id: 5,
     consignes:
-      'Réduis le volume de ta poubelle en compostant tes déchets alimentaires . ',
+      'Réduis le volume de ta poubelle en compostant tes déchets alimentaires. ',
     points: 30,
     image: '',
   },
