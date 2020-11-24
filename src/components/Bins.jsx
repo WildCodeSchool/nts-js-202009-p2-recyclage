@@ -58,6 +58,11 @@ class Bins extends Component {
               >
                 <Popup>
                   <p>Colonnes aériennes</p>
+                  <p>
+                    {filter.filter === 'Colonnes aériennes'
+                      ? ''
+                      : `Type de déchet à recycler : ${filter.filter}`}
+                  </p>
                   <p>Commune: {bins.fields.commune}</p>
                   <p>Adresse: {bins.fields.adresse}</p>
                 </Popup>
