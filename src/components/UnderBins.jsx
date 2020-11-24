@@ -59,6 +59,11 @@ class UnderBins extends Component {
               >
                 <Popup>
                   <p>Colonnes enterrées</p>
+                  <p>
+                    {filter.filter === 'Colonnes enterrées'
+                      ? ''
+                      : `Type de déchet à recycler : ${filter.filter}`}
+                  </p>
                   <p>Commune: {underBins.fields.commune}</p>
                   <p>Adresse: {underBins.fields.adresse}</p>
                 </Popup>

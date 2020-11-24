@@ -45,6 +45,24 @@ class TriSac extends Component {
             if (filter.filter === 'Tri-sac') {
               return true;
             }
+            if (filter.filter === 'Rendez vous Tri-sac 2020') {
+              if (
+                filterTriSac.fields.rdv4 !== undefined &&
+                filterTriSac.fields.hdebut4 !== undefined &&
+                filterTriSac.fields.hfin4 !== undefined
+              ) {
+                return true;
+              }
+            }
+            if (filter.filter === 'Rendez vous Tri-sac 2021') {
+              if (
+                filterTriSac.fields.rdv1 !== undefined &&
+                filterTriSac.fields.hdebut1 !== undefined &&
+                filterTriSac.fields.hfin1 !== undefined
+              ) {
+                return true;
+              }
+            }
             return false;
           })
           .map((sacList) => {
@@ -56,15 +74,45 @@ class TriSac extends Component {
               >
                 <Popup>
                   <p>Tri'Sac</p>
-
                   <p>
-                    Adresse:
-                    {sacList.fields.numero}
-                    {sacList.fields.adresse}
+                    Adresse: {sacList.fields.numero} {sacList.fields.adresse}
+                  </p>
+                  <p>Commune: {sacList.fields.commune}</p>
+                  <p>
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2020'
+                      ? `Prochain rendez vous : ${sacList.fields.rdv4} `
+                      : ''}
                   </p>
                   <p>
-                    Commune:
-                    {sacList.fields.commune}
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2020'
+                      ? `Heure de début : ${sacList.fields.hdebut4}`
+                      : ''}
+                  </p>
+                  <p>
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2020'
+                      ? `Heure de fin : ${sacList.fields.hfin4}`
+                      : ''}
+                  </p>
+                  <p>
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2021'
+                      ? `Prochain rendez vous : ${sacList.fields.rdv1} `
+                      : ''}
+                  </p>
+                  <p>
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2021'
+                      ? `Heure de début : ${sacList.fields.hdebut1}`
+                      : ''}
+                  </p>
+                  <p>
+                    {' '}
+                    {filter.filter === 'Rendez vous Tri-sac 2021'
+                      ? `Heure de fin : ${sacList.fields.hfin1}`
+                      : ''}
                   </p>
                 </Popup>
               </Marker>
