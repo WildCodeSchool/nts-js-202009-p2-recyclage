@@ -36,28 +36,26 @@ class Avatar extends React.Component {
 
     return (
       <div className="Avatar">
-        <h1>Bienvenue, {nickname} !</h1>
+        <h1>Bienvenue {nickname} !</h1>
         <DataAvatar />
+        <div>
+          <small
+            className={maxReached ? 'smallCharactersMax' : 'smallCharactersOk'}
+          >
+            {numNickname} caractères restants
+          </small>
+        </div>
         <form className="LabelNickname" onSubmit={this.handleSubmit}>
-          <h3 className="EnterNickName">Entre ton pseudo :</h3>
           <input
             className={maxReached ? 'lenght-max-readched' : 'length-ok'}
             type="text"
             id="nickname"
             name="nickname"
-            placeholder="ici"
-            value={nickname}
+            minLength="3"
+            placeholder="Entre ton pseudo"
+            autoComplete="off"
             onChange={this.changeNickName}
           />
-          <div>
-            <small
-              className={
-                maxReached ? 'smallCharactersMax' : 'smallCharactersOk'
-              }
-            >
-              {numNickname} caractères restant
-            </small>
-          </div>
         </form>
         <p>
           Choisis un personnage ou édite-le en cliquant sur la photo et le texte

@@ -1,0 +1,16 @@
+.ScoreAvatar {
+    display: flex;
+    justify-content: center;
+}
+
+.Jauge {
+    padding-top: 25px;
+}
+
+.ScoreAvatar .Jauge h3 {
+    color: rgb(119, 236, 186);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
