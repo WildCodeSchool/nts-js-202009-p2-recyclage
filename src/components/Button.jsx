@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Button.css';
+class Button extends Component {
+  constructor(props) {
+    super(props);
+    this.test = this.test.bind(this);
+  }
 
-function button() {
-  return (
-    <div className="container">
-      <button type="button" className="doneBttn">
-        Done !
-      </button>
-    </div>
-  );
+  test(jauge) {
+    const { changeBar } = this.props;
+    changeBar(jauge);
+  }
+
+  render() {
+    const { mission } = this.props;
+    const { jauge } = mission;
+    return (
+      <div className="container">
+        <button type="button" className="doneBttn" onClick={() =>this.test(jauge)}>
+          Done !
+        </button>
+      </div>
+    );
+  }
 }
 
-export default button;
+export default Button;

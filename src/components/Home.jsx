@@ -8,9 +8,14 @@ import MissionBoxContainer from './MissionBoxContainer';
 import Maps from './Maps';
 import Footer from './Footer';
 
-function Home() {
+function Home(props) {
   const [value, setValue] = useState(false);
   const [filter, setFilter] = useState('');
+
+  const barChanged = (jauge) => {
+    const { barChangedHome } = props;
+    barChangedHome(jauge);
+  };
 
   const gotFilter = (filterValue) => {
     setFilter(filterValue);
@@ -19,7 +24,7 @@ function Home() {
     <div className="home">
       <Header />
       <Title />
-      <MissionBoxContainer />
+      <MissionBoxContainer barChanged={barChanged} />
       <IntroCarte />
       <Toggle
         isOn={value}

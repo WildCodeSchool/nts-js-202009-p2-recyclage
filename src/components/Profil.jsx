@@ -4,12 +4,13 @@ import Avatar2 from './Avatar2';
 import ScoreAvatar from './ScoreAvatar';
 import Footer from './Footer';
 
-function Profil() {
+function Profil(props) {
+
   return (
     <div className="profil">
       <Header />
       <Avatar2 />
-      <ScoreAvatar />
+      <ScoreAvatar jauge= {props.jauge}/>
       <Footer />
     </div>
   );

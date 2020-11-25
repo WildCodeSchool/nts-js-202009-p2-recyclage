@@ -1,6 +1,6 @@
 import React from 'react';
 import './ScoreAvatar.css';
-import { ProgressBar } from './ProgressBar.jsx';
+import ProgressBar from './ProgressBar';
 
 class ScoreAvatar extends React.Component {
   constructor(props) {
@@ -9,19 +9,19 @@ class ScoreAvatar extends React.Component {
     const local = parseFloat(this.localStorage.getItem('Progress'));
     this.state = {
       percent: local || 0,
-      points: 0.3,
+      bar : this.props.jauge,
     };
     this.updateProgress = this.updateProgress.bind(this);
   }
 
   componentDidMount() {
-    this.updateProgress('percent', this.state.percent + this.state.points);
+    this.updateProgress('percent', this.state.percent + this.state.bar);
   }
 
   updateProgress(field, val) {
     if (this.state.percent === 1) {
       this.setState({ [field]: 0 });
-    } else if (this.state.percent > 1 - this.state.points) {
+    } else if (this.state.percent > 1 - this.state.bar) {
       this.setState({ [field]: 1 });
     } else {
       this.setState({ [field]: val });
