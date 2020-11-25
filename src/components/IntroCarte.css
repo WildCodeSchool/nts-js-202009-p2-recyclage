@@ -9,7 +9,7 @@
   height: 195px;
 }
 
-h4 {
+h1 {
   font-family: 'Nunito', sans-serif;
   font-size: 1.8em;
   color: #7389f7;
@@ -22,5 +22,21 @@ h4 {
 .icon {
   background: url('https://api.iconify.design/el:map-marker.svg?color=%2379E9D0')
     no-repeat center center / contain;
-  background-size: 45%;
+  background-size: 30%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Intro {
+    height: 300px;
+  }
+  .icon {
+    background-size: 38%;
+  }
+  .titleh1 {
+    width: 600px;
+  }
+  .titleh1 h1 {
+    font-size: 34px;
+    line-height: 1.3em;
+  }
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 .missionBox {
-  background-color: #9ef2ff;
+  background-color: #82e6f5;
   height: 125px;
   width: 272px;
   color: #ffffff;
@@ -30,4 +30,18 @@
   display: flex;
   text-align: start;
   margin-block-start: -5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .missionBox {
+    height: 190px;
+    width: 450px;
+  }
+  .missiontitle {
+    font-size: 34px;
+  }
+  .missions {
+    font-size: 20px;
+    margin: 12px;
+  }
 }

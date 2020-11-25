@@ -5,7 +5,9 @@ function IntroCarte() {
   return (
     <div className="Intro">
       <div className="icon">
-        <h4>Trouve le point de collecte le plus proche de chez toi !</h4>
+        <div className="titleh1">
+          <h1>Trouve le point de collecte le plus proche de chez toi !</h1>
+        </div>
       </div>
     </div>
   );
