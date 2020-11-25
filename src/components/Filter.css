@@ -1,0 +1,76 @@
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containeropen {
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerclose {
+  background-color: white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filtertopen {
+  color: #77ecba;
+  transform: translate(0px, -10px);
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
+  text-align: center;
+}
+
+.filtertclose {
+  color: #77ecba;
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  padding: 7px;
+  text-align: center;
+}
+
+.btnfilter {
+  border-radius: 3px;
+  border-color: #77ecba;
+  color: #77ecba;
+  border-style: solid;
+  background-color: white;
+  font-size: 19px;
+  margin: 3px 8px;
+  flex: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btnfilter:hover {
+  background-color: #77ecba;
+  color: white;
+}
+.open {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close {
+  transform: translate(0px, -25px);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  height: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}

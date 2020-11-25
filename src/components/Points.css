@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.Points {
+  width: 49px;
+  height: 50px;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+  transform: rotate(-16.71deg);
+  color: #ffffff;
+  transform: rotate(-16.71deg);
+  background-color: #7389f7;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.points {
+  color: white;
+  margin: 0;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Points {
+    width: 65px;
+    height: 65px;
+  }
+  .points {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+.Intro {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0f2f6;
+  height: 195px;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8em;
+  color: #7389f7;
+  text-align: center;
+  padding: 60px;
+  line-height: 33px;
+  padding: 80px;
+}
+
+.icon {
+  background: url('https://api.iconify.design/el:map-marker.svg?color=%2379E9D0')
+    no-repeat center center / contain;
+  background-size: 30%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Intro {
+    height: 300px;
+  }
+  .icon {
+    background-size: 38%;
+  }
+  .titleh1 {
+    width: 600px;
+  }
+  .titleh1 h1 {
+    font-size: 34px;
+    line-height: 1.3em;
+  }
+}

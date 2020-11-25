@@ -1,0 +1,23 @@
+.social-container {
+  height: 407px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.38) 30.95%,
+    #77ecba 100%
+  );
+}
+
+.social-icons {
+  display: flex;
+  align-items: space-around;
+}
+.picto {
+  padding: 15px;
+}
