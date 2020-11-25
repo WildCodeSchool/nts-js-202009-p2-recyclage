@@ -27,7 +27,6 @@ MissionBox.propTypes = {
     id: PropTypes.number.isRequired,
     consignes: PropTypes.string.isRequired,
     points: PropTypes.number.isRequired,
-    image: PropTypes.object.isRequired,
   }),
 };
 

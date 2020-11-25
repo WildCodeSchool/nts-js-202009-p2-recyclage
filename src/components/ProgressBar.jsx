@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import './ProgressBar.css';
 
-export var ProgressBar = ({ width, percent }) => {
+ const ProgressBar = ({ width, percent }) => {
   const [value, setValue] = React.useState(0);
   React.useEffect(() => {
     setValue(percent * width);
@@ -14,3 +14,5 @@ export var ProgressBar = ({ width, percent }) => {
     </div>
   );
 };
+
+export default ProgressBar;
