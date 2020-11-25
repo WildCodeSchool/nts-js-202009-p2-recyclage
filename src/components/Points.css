@@ -17,3 +17,13 @@
   margin: 0;
   padding: 5px;
 }
+
+@media only screen and (min-width: 768px) {
+  .Points {
+    width: 65px;
+    height: 65px;
+  }
+  .points {
+    margin: 10px;
+  }
+}
