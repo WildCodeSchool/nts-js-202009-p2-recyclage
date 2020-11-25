@@ -4,14 +4,24 @@ import './Button.css';
 class Button extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.test = this.test.bind(this);
+  }
+
+  test(jauge) {
+    const { changeBar } = this.props;
+    changeBar(jauge);
   }
 
   render() {
-    console.log(this.state.point);
+    const { mission } = this.props;
+    const { jauge } = mission;
     return (
       <div className="container">
-        <button type="button" onClick={this.changePoint} className="doneBttn">
+        <button
+          type="button"
+          className="doneBttn"
+          onClick={() => this.test(jauge)}
+        >
           Done !
         </button>
       </div>
