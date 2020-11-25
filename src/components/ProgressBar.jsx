@@ -1,10 +1,10 @@
 import React from 'react';
 import './ProgressBar.css';
 
- const ProgressBar = ({ width, percent }) => {
+const ProgressBar = ({ width, percent }) => {
   const [value, setValue] = React.useState(0);
   React.useEffect(() => {
-    setValue(percent * width);
+    setValue(width * percent);
   });
   return (
     <div>

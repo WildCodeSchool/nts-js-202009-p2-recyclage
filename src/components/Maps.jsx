@@ -11,7 +11,7 @@ class Maps extends Component {
     this.state = {
       lat: 47.213792,
       lng: -1.555784,
-      zoom: 10,
+      zoom: 11,
     };
   }
 

@@ -10,7 +10,8 @@
   margin: 1em;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerclose {
@@ -18,22 +19,24 @@
   margin: 1em;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
 }
-.filtert {
+.filtertopen {
   color: #77ecba;
   transform: translate(0px, -10px);
   font-size: 26px;
   font-family: 'Nunito', sans-serif;
   padding: 7px;
+  text-align: center;
 }
 
-.filtertopen {
+.filtertclose {
   color: #77ecba;
-  transition: 0.1s ease-in-out;
   font-size: 26px;
   font-family: 'Nunito', sans-serif;
   padding: 7px;
+  text-align: center;
 }
 
 .btnfilter {
@@ -58,11 +61,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
 }
 
 .close {
-  transform: translate(0px, -10px);
+  transform: translate(0px, -25px);
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   height: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }

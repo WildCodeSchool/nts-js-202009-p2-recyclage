@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Button.css';
+
 class Button extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,11 @@ class Button extends Component {
     const { jauge } = mission;
     return (
       <div className="container">
-        <button type="button" className="doneBttn" onClick={() =>this.test(jauge)}>
+        <button
+          type="button"
+          className="doneBttn"
+          onClick={() => this.test(jauge)}
+        >
           Done !
         </button>
       </div>
