@@ -1,6 +1,6 @@
 import React from 'react';
 import './ScoreAvatar.css';
-import { ProgressBar } from './ProgressBar.jsx';
+import ProgressBar from './ProgressBar';
 
 class ScoreAvatar extends React.Component {
   constructor(props) {

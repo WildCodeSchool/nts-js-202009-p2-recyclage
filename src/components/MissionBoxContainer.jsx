@@ -4,7 +4,6 @@ import Button from './Button';
 import Arrow from './Arrow';
 import Points from './Points';
 import './MissionBoxContainer.css';
-import BouteillePlastique from './img/BouteillePlastique-01.svg';
 
 const missions = [
   {
@@ -12,35 +11,30 @@ const missions = [
     consignes:
       "Recycle tes bouteilles en plastique, jette-les dans un Tri'Sac jaune ou dans un point d'apport plastique.",
     points: 20,
-    image: { BouteillePlastique },
   },
   {
     id: 2,
     consignes:
       'Recycle tes bouteilles et pots en verre, jette-les dans un conteneur dédié près de chez toi. ',
     points: 30,
-    image: '',
   },
   {
     id: 3,
     consignes:
       'Remplace tes achats sous emballages plastique/carton par des produits vendu en vrac. ',
     points: 20,
-    image: '',
   },
   {
     id: 4,
     consignes:
       'Trie tes déchets électroniques, ampoules, piles,... en déchetterie ',
     points: 10,
-    image: '',
   },
   {
     id: 5,
     consignes:
       'Réduis le volume de ta poubelle en compostant tes déchets alimentaires. ',
     points: 30,
-    image: '',
   },
 ];
 
@@ -85,7 +79,7 @@ class MissionBoxContainer extends React.Component {
             <Points mission={mission} />
           </div>
           <MissionBox mission={mission} />
-          <Button />
+          <Button addPoint={this.addPoint} mission={mission} />
         </div>
         <div onClick={this.indexIncrement} className="arrows">
           <Arrow direction="right" />
