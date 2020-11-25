@@ -48,6 +48,7 @@ class MissionBoxContainer extends React.Component {
     super(props);
     this.state = {
       index: 0,
+      challengeAccepted: false,
     };
     this.changeBar = this.changeBar.bind(this);
     this.indexIncrement = this.indexIncrement.bind(this);
@@ -57,6 +58,9 @@ class MissionBoxContainer extends React.Component {
   changeBar(jauge) {
     const { barChanged } = this.props;
     barChanged(jauge);
+    this.setState({
+      challengeAccepted: !this.state.challengeAccepted,
+    });
   }
 
   indexIncrement() {
@@ -78,22 +82,32 @@ class MissionBoxContainer extends React.Component {
   }
 
   render() {
-    const { index } = this.state;
+    const { index, challengeAccepted } = this.state;
     const mission = missions[index];
     return (
-      <div className="Container">
-        <div onClick={this.indexDecrement} className="arrows">
-          <Arrow direction="left" />
-        </div>
-        <div className="main">
-          <div className="pointsDirection">
-            <Points mission={mission} />
+      <div>
+        <div className="Container">
+          <div onClick={this.indexDecrement} className="arrows">
+            <Arrow direction="left" />
           </div>
-          <MissionBox mission={mission} />
-          <Button mission={mission} changeBar={this.changeBar} />
+          <div className="main">
+            <div className="pointsDirection">
+              <Points mission={mission} />
+            </div>
+            <MissionBox mission={mission} />
+            <Button mission={mission} changeBar={this.changeBar} />
+          </div>
+          <div onClick={this.indexIncrement} className="arrows">
+            <Arrow direction="right" />
+          </div>
         </div>
-        <div onClick={this.indexIncrement} className="arrows">
-          <Arrow direction="right" />
+        <div
+          className={challengeAccepted === true ? 'acceptMission' : 'noMission'}
+        >
+          Félicitations, tu as gagné des points dans ton profil !
+          <span role="img" aria-label="wouah">
+            🎉
+          </span>
         </div>
       </div>
     );
