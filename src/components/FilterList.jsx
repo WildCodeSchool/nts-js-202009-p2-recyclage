@@ -14,8 +14,12 @@ const typeFilter = [
     id: 2,
   },
   {
-    filterTitle: 'Lieux et Rdv Tri-sac',
-    filters: ['Tri-sac'],
+    filterTitle: 'Lieux et rendez vous Tri-sac',
+    filters: [
+      'Tri-sac',
+      'Rendez vous Tri-sac 2020',
+      'Rendez vous Tri-sac 2021',
+    ],
     id: 3,
   },
 ];
