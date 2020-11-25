@@ -17,13 +17,7 @@ class Filter extends React.Component {
     const { filterTitle, filters, getFilter } = this.props;
     const { open } = this.state;
     return (
-      <div
-        className={open ? 'containeropen' : 'containerclose'}
-        onClick={() => {
-          const isopen = !open;
-          this.setState({ open: isopen });
-        }}
-      >
+      <div className="container">
         <h2
           className={open ? 'filtertopen' : 'filtertclose'}
           onClick={() => {
