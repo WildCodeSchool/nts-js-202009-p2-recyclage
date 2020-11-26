@@ -9,6 +9,9 @@
   box-shadow: 3px 3px 0px #66dfac;
   margin-top: -15px;
 }
+.doneBttn:focus {
+  outline: none;
+}
 
 @media only screen and (min-width: 768px) {
   .doneBttn {
