@@ -18,6 +18,7 @@ class ScoreAvatar extends React.Component {
     this.updateProgress('percent', this.state.percent + this.state.bar);
   }
 
+
   updateProgress(field, val) {
     if (this.state.percent === 1) {
       this.setState({ [field]: 0 });
@@ -25,7 +26,7 @@ class ScoreAvatar extends React.Component {
       this.setState({ [field]: 1 });
     } else {
       this.setState({ [field]: val });
-    }
+    };
   }
 
   render() {
