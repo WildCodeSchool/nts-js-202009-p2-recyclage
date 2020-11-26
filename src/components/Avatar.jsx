@@ -13,6 +13,7 @@ class Avatar extends React.Component {
       nickname: nickNameOk || '',
     };
     this.changeNickName = this.changeNickName.bind(this);
+    this.valid = this.valid.bind(this);
   }
 
   handleSubmit(event) {
@@ -22,12 +23,16 @@ class Avatar extends React.Component {
   changeNickName(event) {
     const newNickName = event.target.value;
     if (newNickName.length <= MAX_LENGTH) {
-      this.localStorage.setItem('newNickName', newNickName);
       this.setState({
         nickname: newNickName,
       });
     }
   }
+
+  valid() {
+    this.localStorage.setItem('newNickName', this.state.nickname);
+  }
+
 
   render() {
     const { nickname } = this.state;
@@ -57,6 +62,15 @@ class Avatar extends React.Component {
             onChange={this.changeNickName}
           />
         </form>
+        <div className="container">
+        <button
+          type="button"
+          className="validBttn"
+          onClick={() => this.valid()}
+        >
+          Valider
+        </button>
+      </div>
         <p>
           Choisis un personnage ou édite-le en cliquant sur la photo et le texte
         </p>
