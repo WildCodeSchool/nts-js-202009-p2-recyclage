@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import './Maps.css';
 import L from 'leaflet';
@@ -75,3 +76,7 @@ class Bins extends Component {
 }
 
 export default Bins;
+
+Bins.propTypes = {
+  filter: PropTypes.objectOf(PropTypes.string).isRequired,
+};

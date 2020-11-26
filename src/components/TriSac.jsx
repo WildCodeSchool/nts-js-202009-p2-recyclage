@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import './Maps.css';
 import L from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
@@ -68,7 +69,7 @@ class TriSac extends Component {
           .map((sacList) => {
             return (
               <Marker
-                key={sacList.fields.location}
+                key={sacList.fields.id}
                 position={sacList.fields.location}
                 icon={myIcon}
               >
@@ -124,3 +125,7 @@ class TriSac extends Component {
 }
 
 export default TriSac;
+
+TriSac.propTypes = {
+  filter: PropTypes.objectOf(PropTypes.string).isRequired,
+};

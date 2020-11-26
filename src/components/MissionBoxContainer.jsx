@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MissionBox from './MissionBox';
 import Button from './Button';
 import Arrow from './Arrow';
@@ -48,6 +49,7 @@ class MissionBoxContainer extends React.Component {
     super(props);
     this.state = {
       index: 0,
+      challengeAccepted: false,
     };
     this.changeBar = this.changeBar.bind(this);
     this.indexIncrement = this.indexIncrement.bind(this);
@@ -56,12 +58,41 @@ class MissionBoxContainer extends React.Component {
 
   changeBar(jauge) {
     const { barChanged } = this.props;
+    const { challengeAccepted } = this.state;
     barChanged(jauge);
+    this.setState({
+      challengeAccepted: !challengeAccepted,
+    });
+    if (challengeAccepted === true) {
+      setTimeout(
+        clearInterval,
+        5000,
+        setInterval(() => {
+          this.setState({
+            challengeAccepted: false,
+          });
+        }, 5000)
+      );
+    } else {
+      this.setState({
+        challengeAccepted: true,
+      });
+      setTimeout(
+        clearInterval,
+        5000,
+        setInterval(() => {
+          this.setState({
+            challengeAccepted: false,
+          });
+        }, 5000)
+      );
+    }
   }
 
   indexIncrement() {
-    if (this.state.index < missions.length - 1) {
-      const plusIndex = this.state.index + 1;
+    const { index } = this.state;
+    if (index < missions.length - 1) {
+      const plusIndex = index + 1;
       this.setState({ index: plusIndex });
     } else {
       this.setState({ index: 0 });
@@ -69,8 +100,9 @@ class MissionBoxContainer extends React.Component {
   }
 
   indexDecrement() {
-    if (this.state.index > 0) {
-      const lessIndex = this.state.index - 1;
+    const { index } = this.state;
+    if (index > 0) {
+      const lessIndex = index - 1;
       this.setState({ index: lessIndex });
     } else {
       this.setState({ index: missions.length - 1 });
@@ -78,22 +110,32 @@ class MissionBoxContainer extends React.Component {
   }
 
   render() {
-    const { index } = this.state;
+    const { index, challengeAccepted } = this.state;
     const mission = missions[index];
     return (
-      <div className="Container">
-        <div onClick={this.indexDecrement} className="arrows">
-          <Arrow direction="left" />
-        </div>
-        <div className="main">
-          <div className="pointsDirection">
-            <Points mission={mission} />
+      <div>
+        <div className="Container">
+          <div onClick={this.indexDecrement} className="arrows">
+            <Arrow direction="left" />
           </div>
-          <MissionBox mission={mission} />
-          <Button mission={mission} changeBar={this.changeBar} />
+          <div className="main">
+            <div className="pointsDirection">
+              <Points mission={mission} />
+            </div>
+            <MissionBox mission={mission} />
+            <Button mission={mission} changeBar={this.changeBar} />
+          </div>
+          <div onClick={this.indexIncrement} className="arrows">
+            <Arrow direction="right" />
+          </div>
         </div>
-        <div onClick={this.indexIncrement} className="arrows">
-          <Arrow direction="right" />
+        <div
+          className={challengeAccepted === true ? 'acceptMission' : 'noMission'}
+        >
+          Félicitations, tu as gagné des points dans ton profil !
+          <span role="img" aria-label="wouah">
+            🎉
+          </span>
         </div>
       </div>
     );
@@ -101,3 +143,7 @@ class MissionBoxContainer extends React.Component {
 }
 
 export default MissionBoxContainer;
+
+MissionBoxContainer.propTypes = {
+  barChanged: PropTypes.func.isRequired,
+};
