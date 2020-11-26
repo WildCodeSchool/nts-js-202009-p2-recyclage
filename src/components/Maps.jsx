@@ -25,7 +25,12 @@ class Maps extends Component {
     };
     return (
       <div className="maps">
-        <MapContainer className="map" center={position} zoom={zoom}>
+        <MapContainer
+          className="map"
+          minZoom={zoom}
+          center={position}
+          zoom={zoom}
+        >
           <TileLayer
             attribution='&amp;copy <a href="http://
 osm.org/copyright">OpenStreetMap</a> 
