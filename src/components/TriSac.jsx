@@ -68,7 +68,7 @@ class TriSac extends Component {
           .map((sacList) => {
             return (
               <Marker
-                key={sacList.fields.location}
+                key={sacList.fields.id}
                 position={sacList.fields.location}
                 icon={myIcon}
               >
