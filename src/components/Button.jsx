@@ -5,10 +5,10 @@ import './Button.css';
 class Button extends Component {
   constructor(props) {
     super(props);
-    this.test = this.test.bind(this);
+    this.addPoint = this.addPoint.bind(this);
   }
 
-  test(jauge) {
+  addPoint(jauge) {
     const { changeBar } = this.props;
     changeBar(jauge);
   }
@@ -21,7 +21,7 @@ class Button extends Component {
         <button
           type="button"
           className="doneBttn"
-          onClick={() => this.test(jauge)}
+          onClick={() => this.addPoint(jauge)}
         >
           Done !
         </button>
