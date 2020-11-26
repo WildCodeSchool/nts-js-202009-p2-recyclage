@@ -57,10 +57,35 @@ class MissionBoxContainer extends React.Component {
 
   changeBar(jauge) {
     const { barChanged } = this.props;
+    const { challengeAccepted } = this.state;
     barChanged(jauge);
     this.setState({
-      challengeAccepted: !this.state.challengeAccepted,
+      challengeAccepted: !challengeAccepted,
     });
+    if (challengeAccepted === true) {
+      setTimeout(
+        clearInterval,
+        5000,
+        setInterval(() => {
+          this.setState({
+            challengeAccepted: false,
+          });
+        }, 5000)
+      );
+    } else {
+      this.setState({
+        challengeAccepted: true,
+      });
+      setTimeout(
+        clearInterval,
+        5000,
+        setInterval(() => {
+          this.setState({
+            challengeAccepted: false,
+          });
+        }, 5000)
+      );
+    }
   }
 
   indexIncrement() {

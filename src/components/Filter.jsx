@@ -21,8 +21,7 @@ class Filter extends React.Component {
         <h2
           className={open ? 'filtertopen' : 'filtertclose'}
           onClick={() => {
-            const isopen = !open;
-            this.setState({ open: isopen });
+            this.setState({ open: !open });
           }}
         >
           {filterTitle}
