@@ -23,11 +23,7 @@ class MissionBox extends Component {
 }
 
 MissionBox.propTypes = {
-  mission: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    consignes: PropTypes.string.isRequired,
-    points: PropTypes.number.isRequired,
-  }),
+  mission: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 export default MissionBox;

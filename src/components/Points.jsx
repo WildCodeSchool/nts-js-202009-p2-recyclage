@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Points.css';
 
 class Points extends Component {
@@ -19,3 +20,7 @@ class Points extends Component {
 }
 
 export default Points;
+
+Points.propTypes = {
+  mission: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};

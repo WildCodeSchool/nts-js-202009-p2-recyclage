@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Button.css';
 
 class Button extends Component {
@@ -28,5 +29,9 @@ class Button extends Component {
     );
   }
 }
+Button.propTypes = {
+  changeBar: PropTypes.func.isRequired,
+  mission: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
 
 export default Button;

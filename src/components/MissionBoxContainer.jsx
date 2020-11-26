@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MissionBox from './MissionBox';
 import Button from './Button';
 import Arrow from './Arrow';
@@ -89,8 +90,9 @@ class MissionBoxContainer extends React.Component {
   }
 
   indexIncrement() {
-    if (this.state.index < missions.length - 1) {
-      const plusIndex = this.state.index + 1;
+    const { index } = this.state;
+    if (index < missions.length - 1) {
+      const plusIndex = index + 1;
       this.setState({ index: plusIndex });
     } else {
       this.setState({ index: 0 });
@@ -98,8 +100,9 @@ class MissionBoxContainer extends React.Component {
   }
 
   indexDecrement() {
-    if (this.state.index > 0) {
-      const lessIndex = this.state.index - 1;
+    const { index } = this.state;
+    if (index > 0) {
+      const lessIndex = index - 1;
       this.setState({ index: lessIndex });
     } else {
       this.setState({ index: missions.length - 1 });
@@ -140,3 +143,7 @@ class MissionBoxContainer extends React.Component {
 }
 
 export default MissionBoxContainer;
+
+MissionBoxContainer.propTypes = {
+  barChanged: PropTypes.func.isRequired,
+};

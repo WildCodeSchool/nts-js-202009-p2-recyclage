@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import './Maps.css';
 import L from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
@@ -76,3 +77,7 @@ class UnderBins extends Component {
 }
 
 export default UnderBins;
+
+UnderBins.propTypes = {
+  filter: PropTypes.objectOf(PropTypes.string).isRequired,
+};

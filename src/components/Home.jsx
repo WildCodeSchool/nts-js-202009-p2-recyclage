@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import IntroCarte from './IntroCarte';
 import Toggle from './Toggle';
@@ -39,3 +40,7 @@ function Home(props) {
 }
 
 export default Home;
+
+Home.propTypes = {
+  barChangedHome: PropTypes.func.isRequired,
+};

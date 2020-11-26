@@ -1,5 +1,5 @@
 import React from 'react';
-import './Avatar2.css';
+import './Avatar.css';
 import DataAvatar from './DataAvatar';
 
 const MAX_LENGTH = 20;

@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Toggle.css';
 
-// eslint-disable-next-line react/prop-types
 const Toggle = ({ isOn, handleToggle, onColor }) => {
   return (
     <div className="toggleButton">
@@ -25,3 +25,9 @@ const Toggle = ({ isOn, handleToggle, onColor }) => {
 };
 
 export default Toggle;
+
+Toggle.propTypes = {
+  isOn: PropTypes.bool.isRequired,
+  handleToggle: PropTypes.func.isRequired,
+  onColor: PropTypes.string.isRequired,
+};
