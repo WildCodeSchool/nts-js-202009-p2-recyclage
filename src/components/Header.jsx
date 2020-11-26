@@ -5,11 +5,18 @@ import { CgProfile } from 'react-icons/cg';
 import './HeaderCss.css';
 
 function Header() {
+
+  const refresh = () => {
+   window.location.reload()
+  };
+
   return (
     <div className="header">
-      <Link to="/">
+      <div onClick={refresh}>
+      <Link to={"/"} >
         <FaRecycle alt="logo" className="iconR" size="2.5rem" color="77ecba" />
       </Link>
+      </div>
       <Link to="/profil">
         <CgProfile
           alt="icone-profil"
