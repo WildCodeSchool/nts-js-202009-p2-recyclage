@@ -3,11 +3,7 @@ import './ProgressBar.css';
 import PropTypes from 'prop-types';
 
 const ProgressBar = ({ width, percent }) => {
-  const [value, setValue] = React.useReducer(0);
-  React.useReducer(() => {
-    setValue(width * percent);
-  }, [setValue]);
-
+  const value = width * percent;
   return (
     <div>
       <div className="progress-div" style={{ width: width }}>
